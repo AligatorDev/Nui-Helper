@@ -10,3 +10,9 @@ Is that, The first version of the script, any problems, can be reported in my di
 It's very simple to use!
 
 
+
+First, write in your __resource.lua or fxmanifest.lua file!
+
+
+
+
