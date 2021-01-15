@@ -11,24 +11,24 @@ sendRes = function(resourceName,CallbackID,content)
 class LuaExport {
     resourceName;
     constructor(functions) {
-        window.addEventListener("message", function(event) {
+        setTimeout(() => {
+            window.addEventListener("message", function(event) {
 
-            if (event.data.internal) {
-                if(event.data.var) {
-                    if(event.data.set) 
-                        this[event.data.var] = event.data.set;
-                } 
-            } else {
-                let f = functions[event.data.func];
-                
-                if(f) {
-                    this.resourceName = event.data.resname
-                    sendRes(event.data.resname,event.data.callbackid,f(...JSON.parse((event.data.args == null) ? {} : event.data.args)));
+                if (event.data.internal) {
+                    if(event.data.var) {
+                        if(event.data.set) 
+                            this[event.data.var] = event.data.set;
+                    } 
+                } else {
+                    let f = functions[event.data.func];
+
+                    if(f) {
+                        this.resourceName = event.data.resname
+                        sendRes(event.data.resname,event.data.callbackid,f(...JSON.parse((event.data.args == null) ? {} : event.data.args)));
+                    }
                 }
-            }
-            
-            
-        });      
+            });      
+        },0)
     }
 }
 
