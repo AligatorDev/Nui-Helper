@@ -52,7 +52,13 @@ end)
 RegisterNUICallback('func', function(data, cb)
     local f =  funcs[data.func]
     if f then
-        cb(json.encode(f(table.unpack(data.args))))
+         local retorno = f(table.unpack(data.args))
+        if retorno then
+            retorno = json.encode(retorno);
+        else
+            retorno = "null"
+        end
+        cb(retorno)
     end
 end)
 
