@@ -6,6 +6,7 @@ Is the first version of the script, any problems, can be reported in my discord 
 
 It's very simple to use!
 
+# Installation
 First, Download Project, and put it in your resource folder!
 
 Now write on top of your __resource.lua or fxmanifest.lua file!
@@ -29,18 +30,10 @@ Put in header of your html page!
 --> 
 ```
 
+# How use!
 Yuup, now Nui Helper already installed!
 
-In Javascript To call Lua Function write this code
-```js
-let Caller = new LuaCaller(your_resource_name)
-let retorned = Caller.call(funcname,argss)
-```
-In Lua To call Javascript Function write this code
-```lua
- let retorned = Exports:Call(funcname,arggs)
-```
-
+# Define Functions
 In lua to define Functions to call 
 
 ```lua
@@ -59,6 +52,16 @@ let exports = {};
 new LuaExport(exports);
 ```
 
+# Call Functions
+In Javascript To call Lua Function write this code
+```js
+let Caller = new LuaCaller(your_resource_name)
+let retorned = Caller.call(funcname,argss)
+```
+In Lua To call Javascript Function write this code
+```lua
+ let retorned = Exports:Call(funcname,arggs)
+```
 
 
-Any Problems Contact me in Discord! 
+Any Problems Contact me in Discord aligoxtoso#8179! 
