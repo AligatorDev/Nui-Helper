@@ -46,7 +46,7 @@ In js to define Functions to call
 
 ```js
 let exports = {};
-  -- Create Your Functions
+  // Create Your Functions
 new LuaExport(exports);
 ```
 
