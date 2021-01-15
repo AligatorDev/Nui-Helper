@@ -8,7 +8,7 @@ It's very simple to use!
 
 First, Download Project, and put it in your resource folder!
 
-Now write in top of your __resource.lua or fxmanifest.lua file!
+Now write on top of your __resource.lua or fxmanifest.lua file!
 
 
 ```lua
