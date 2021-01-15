@@ -58,7 +58,7 @@ let retorned = Caller.call(funcname,argss)
 ```
 In Lua To call Javascript Function write this code
 ```lua
- let retorned = Exports:Call(funcname,arggs)
+ local retorned = Exports:Call(funcname,arggs)
 ```
 
 
