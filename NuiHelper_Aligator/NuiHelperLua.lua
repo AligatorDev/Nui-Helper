@@ -1,6 +1,7 @@
 
 Exports = {}
-
+local funcs = {}
+local clbs = {}
 local function UpdateResourceName()
     SendNuiMessage({
         internal = true,
@@ -8,10 +9,12 @@ local function UpdateResourceName()
         set = GetCurrentResourceName()
     })  
 end
-local funcs = {}
+local function AddCallBack(cb,calb)
+    clbs[cb] = calb;
+
+end
 function Exports:SetTable(ftable) 
     funcs = ftable
-  
 end
 
 
@@ -36,13 +39,10 @@ function Exports:Call(name,...)
     end
     return retorno;
 end
-local clbs = {}
 
 
-local function AddCallBack(cb,calb)
-    clbs[cb] = calb;
 
-end
+
 RegisterNUICallback('CALLBACKS', function(data, cb)
     local f =  clbs[data.callbackid]
     if f then
