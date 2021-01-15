@@ -16,7 +16,7 @@ end
 
 
 
- function Exports:Call(name,...) 
+function Exports:Call(name,...) 
     callbackid = GetGameTimer()
     SendNuiMessage(json.encode({
         internal = false,
@@ -25,11 +25,13 @@ end
         callbackid = callbackid,
         args = json.encode({...});
     }))  
+    local retorned = false;
     local retorno = nil
     AddCallBack(callbackid,function(...)
+        retorned = true;
         retorno = ...;
     end)
-    while  retorno == nil do
+    while  retorned == false do
         Citizen.Wait(10)
     end
     return retorno;
