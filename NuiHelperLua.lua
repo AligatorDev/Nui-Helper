@@ -11,7 +11,7 @@ end
 local funcs = {}
 function Exports:SetTable(ftable) 
     funcs = ftable
-    UpdateResourceName()
+  
 end
 
 
