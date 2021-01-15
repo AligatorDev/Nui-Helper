@@ -33,7 +33,7 @@ Yuup, now Nui Helper already installed!
 
 In Javascript To call Lua Function write this code
 ```js
-let Caller = LuaCaller(your_resource_name)
+let Caller = new LuaCaller(your_resource_name)
 let retorned = Caller.call(funcname,argss)
 ```
 In Lua To call Javascript Function write this code
