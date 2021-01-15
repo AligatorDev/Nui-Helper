@@ -30,8 +30,6 @@ Put in header of your html page!
 --> 
 ```
 
-# How use!
-Yuup, now Nui Helper already installed!
 
 # Define Functions
 In lua to define Functions to call 
